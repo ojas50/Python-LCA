@@ -46,3 +46,69 @@ print(
     f"Highest Marks: {highest_sub} ({marks_dict[highest_sub]} marks)"
 )
 print(f"Lowest Marks: {lowest_sub} ({marks_dict[lowest_sub]} marks)")
+
+# 4. Check if a Number is Positive, Negative, or Zero
+num = float(input("Enter a number: "))
+if num > 0:
+  print("The number is Positive.")
+elif num < 0:
+  print("The number is Negative.")
+else:
+  print("The number is Zero.")
+
+#5. Check if a Number is Even or Odd
+num = int(input("Enter an integer: "))
+if num % 2 == 0:
+  print("The number is Even.")
+else:
+  print("The number is Odd.")
+
+#6. Check Same Last Digit for Two Non-Negative Values\
+num1 = int(input("Enter first non-negative value: "))
+num2 = int(input("Enter second non-negative value: "))
+if num1 % 10 == num2 % 10:
+  print("True")
+else:
+  print("False")
+
+#7.1 Print Numbers from 1 to 10 in a Single Row with Tab Space
+for i in range(1,11):
+  print(i, end="\t")
+print()
+
+#7.2 Print Numbers from 1 to 10 always on a new line
+for i in range(1,6):
+  print(i, end="\n")
+  print
+
+#8. Print Even Numbers Between 23 to 57 (Separate Rows)
+for i in range(23,58):
+  if i % 2 == 0:
+    print(i)
+
+#9. Check if a Given Number is Prime or Not
+num = int(input("Enter a number: "))
+if num <= 1:
+  print("Not a prime number")
+else:
+  is_prime = True
+  for i in range(2, int(num**0.5) + 1):
+    if num % i == 0:
+      is_prime = False
+      break
+  if is_prime:
+    print(f"{num} is a Prime number.")
+  else:
+    print(f"{num} is not a Prime number.")
+
+#10. Print Prime Numbers Between 10 to 99
+print("Prime numbers between 10 and 99:")
+for num in range(10, 100):
+  is_prime = True
+  for i in range(2, int(num**0.5) + 1):
+    if num % i == 0:
+      is_prime = False
+      break
+  if is_prime:
+    print(num, end=" ")
+print()
