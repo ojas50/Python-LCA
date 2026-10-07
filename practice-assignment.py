@@ -1,4 +1,4 @@
-#1. Write a python program to Print following statements as an output using print statement.
+#1. Print Student Details
 
 print("Student Name: John Doe")
 print("Address: 123 Main Street")
@@ -9,7 +9,7 @@ print("Year: 2026")
 print("Panel: A")
 print("Roll_No: 101")
 
-#2.In the previous code you written, modify the statements printing following fields into multi-line comments, so these fields will not be the part of the output.
+#2. Multi-line Comments for Specific Fields
 
 print("Student Name: John Doe")
 """
@@ -23,7 +23,7 @@ print("Year: 2026")
 print("Panel: A")
 print("Roll_No: 101")
 
-#3 Accept Student Name, Roll Number and Marks of the 3 subjects from the user. Calculate the percentage of the marks and display it. Display the Subject with Highest and lowest marks.
+#3 Student Marks, Percentage, Highest & Lowest Subjects
 name = input("Enter Student Name: ")
 roll_no = input("Enter Roll Number: ")
 
@@ -32,7 +32,7 @@ sub2 = float(input("Enter marks for Subject 2: "))
 sub3 = float(input("Enter marks for Subject 3: "))
 
 total_marks = sub1 + sub2 + sub3
-percentage = (total_marks / 300) * 100  # Assuming each subject is out of 100
+percentage = (total_marks / 300) * 100 
 
 marks_dict = {"Subject 1": sub1, "Subject 2": sub2, "Subject 3": sub3}
 highest_sub = max(marks_dict, key=marks_dict.get)
@@ -42,9 +42,7 @@ print(f"\n--- Student Report ---")
 print(f"Student Name: {name}")
 print(f"Roll Number: {roll_no}")
 print(f"Percentage: {percentage:.2f}%")
-print(
-    f"Highest Marks: {highest_sub} ({marks_dict[highest_sub]} marks)"
-)
+print(f"Highest Marks: {highest_sub} ({marks_dict[highest_sub]} marks)")
 print(f"Lowest Marks: {lowest_sub} ({marks_dict[lowest_sub]} marks)")
 
 # 4. Check if a Number is Positive, Negative, or Zero
@@ -102,13 +100,105 @@ else:
     print(f"{num} is not a Prime number.")
 
 #10. Print Prime Numbers Between 10 to 99
-print("Prime numbers between 10 and 99:")
-for num in range(10, 100):
-  is_prime = True
-  for i in range(2, int(num**0.5) + 1):
-    if num % i == 0:
-      is_prime = False
-      break
-  if is_prime:
-    print(num, end=" ")
-print()
+for num in range(10,101):
+  if num > 1:
+    for i in range(2, num):
+      if (num % i) == 0:
+        break
+    else:
+      print(num, end=" ")
+
+#11. Sum of All Digits of a Given Number
+num = int(input("Enter a number: "))
+temp = abs(num)
+digit_sum = 0
+while temp > 0:
+  digit_sum += temp % 10
+  temp //= 10
+print(f"The sum of the digits is: {digit_sum}")
+
+#12. Reverse a Given Number
+num = int(input("Enter a number: "))
+temp = abs(num)
+rev = 0
+while temp > 0:
+  rev = (rev * 10) + (temp % 10)
+  temp //= 10
+if num < 0:
+  rev = -rev
+print(f"Reversed number: {rev}")
+
+#13. Check if a Given Number is a Palindrome
+num_str = input("Enter a number: ")
+if num_str == num_str[::-1]:
+  print(f"{num_str} is a palindrome.")
+else:
+  print(f"{num_str} is not a palindrome.")
+
+#14. Accept 5 Numbers and Display Their Cube Values
+
+cubes = []
+for i in range(5):
+  n = float(input(f"Enter number {i+1}: "))
+  cubes.append(n**3)
+
+print("Cube values:", cubes)
+#15. Display Prime Factors of a Number
+n = int(input("Enter a number: "))
+print(f"Prime factors of {n}:", end=" ")
+i = 2
+while i * i <= n:
+  if n % i:
+    i += 1
+  else:
+    n //= i
+    print(i, end=" ")
+if n > 1:
+  print(n)
+else:
+  print()
+
+#16. Pattern 1 (Left-Aligned Triangle)
+rows = 4
+for i in range(1, rows + 1):
+  for j in range(i):
+    print("*", end=" ")
+  print()
+
+#17. Pattern 2 (Spaced/Right-Aligned Triangle)
+rows = 4
+for i in range(1, rows + 1):
+  print("  " * (rows - i), end="")
+  for j in range(i):
+    print("*", end=" ")
+  print()
+
+#Mini Project 1
+distance = float(input("How far do you want to travel (in miles)? "))
+if distance < 3:
+  print("Recommendation: Ride a bicycle.")
+elif distance < 300:
+  print("Recommendation: Ride a motorcycle.")
+else:
+  print("Recommendation: Drive a supercar.")
+
+#Mini Project 2
+# Given data
+cost_per_hour = 0.51
+cost_per_day = cost_per_hour * 24
+cost_per_week = cost_per_day * 7
+cost_per_month = cost_per_day * 30
+budget = 918.0
+days_with_budget = budget / cost_per_day
+
+print(f"How much does it cost to operate one server per day?")
+print(f"-> ${cost_per_day:.2f}\n")
+
+print(f"How much does it cost to operate one server per week?")
+print(f"-> ${cost_per_week:.2f}\n")
+
+print(f"How much does it cost to operate one server per month?")
+print(f"-> ${cost_per_month:.2f}\n")
+
+print(f"How many days can I operate one server with $918?")
+print(f"-> {days_with_budget:.1f} days")
