@@ -202,3 +202,111 @@ print(f"-> ${cost_per_month:.2f}\n")
 
 print(f"How many days can I operate one server with $918?")
 print(f"-> {days_with_budget:.1f} days")
+
+#List Practice
+
+#1. Create a list of 5 integers and display/access elements
+my_list = [10, 20, 30, 40, 50]
+print("List:", my_list)
+print("Element at index 0:", my_list[0])
+print("Element at index 2:", my_list[2])
+
+#2. Append a new item to the end of the list
+my_list = [1, 2, 3]
+my_list.append(4)
+print("Appended list:", my_list)
+
+#3. Reverse the order of items in the list
+my_list = [1, 2, 3, 4]
+my_list.reverse()
+print("Reversed list:", my_list)
+
+#4. Print number of occurrences of a specified element
+my_list = [1, 2, 3, 2, 4, 2]
+count = my_list.count(2)
+print("Occurrences of 2:", count)
+
+#5. Append items of list1 to list2 in the front
+list1 = [1, 2]
+list2 = [3, 4]
+list2 = list1 + list2
+print("Combined list:", list2)
+
+#6. Insert a new item before the second element
+my_list = [10, 30, 40]
+my_list.insert(1, 20)
+print("Updated list:", my_list)
+
+#7. Remove the item from a specified index
+my_list = [10, 20, 30, 40]
+del my_list[1]
+print("List after removal:", my_list)
+
+#8. Remove the first occurrence of a specified element
+my_list = [10, 20, 30, 20, 40]
+my_list.remove(20)
+print("List after removing first 20:", my_list)
+
+#9. Accept 20 values and perform operations
+vals = []
+for i in range(20):
+  vals.append(int(input("Enter value: ")))
+
+# a) Count similar elements and print index
+seen = set()
+for i in range(len(vals)):
+  val = vals[i]
+  if vals.count(val) > 1 and val not in seen:
+    seen.add(val)
+    indices = [idx for idx, x in enumerate(vals) if x == val]
+    print("Element", val, "appears at indices:", indices)
+
+# b) Count even and odd values
+even_count = sum(1 for v in vals if v % 2 == 0)
+odd_count = len(vals) - even_count
+print("Even count:", even_count, "Odd count:", odd_count)
+
+# c) Count positive and negative values
+pos_count = sum(1 for v in vals if v > 0)
+neg_count = sum(1 for v in vals if v < 0)
+print("Positive count:", pos_count, "Negative count:", neg_count)
+
+#10. Accept 10 values, sort, and display length
+vals = []
+for i in range(10):
+  vals.append(int(input("Enter value: ")))
+
+print("Sorted list using sorted():", sorted(vals))
+vals.sort(reverse=True)
+print("Sorted list descending using sort():", vals)
+print("Length of list:", len(vals))
+
+#11. Merge two lists using +
+list1 = input("Enter list 1 elements separated by space: ").split()
+list2 = input("Enter list 2 elements separated by space: ").split()
+merged = list1 + list2
+print("Merged list:", merged)
+
+#12. Create an acronym from a phrase
+phrase = input("Enter a phrase: ")
+acronym = "".join([word[0].upper() for word in phrase.split()])
+print("Acronym:", acronym)
+
+#13. Abbreviation of a month given its number
+months = [
+    "",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+]
+num = int(input("Enter month number (1-12): "))
+print("Month abbreviation:", months[num] if 1 <= num <= 12 else "Invalid")
