@@ -1,4 +1,4 @@
-#Create list1 consisting of student names and list2 with their marks, find highest marks and who got them
+#Q1- Create list1 consisting of student names and list2 with their marks, find highest marks and who got them
 list1 = ["swar", "vinayak", "animesh"]
 list2 = [96,95,93]
 
@@ -13,7 +13,7 @@ top_student = list1[highest_index]
 print("Highest marks:", highest_mark)
 print("Top student:", top_student) 
 
-#Accpet any five numbers in a list and find a specific one 
+#Q2- Accpet any five numbers in a list and find a specific one 
 numbers = []
 for i in range(1,6):
     num=int(input("Enter number: "))
