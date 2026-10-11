@@ -1,9 +1,9 @@
 # (1) Python Basics - Practice assignment
 #1. Print Student Details
 
-print("Student Name: John Doe")
+print("Student Name: Ojas")
 print("Address: 123 Main Street")
-print("Contact_No: 9876543210")
+print("Contact_No: 1234567890")
 print("Mother Tongue: English")
 print("School_Name: Springfield High")
 print("Year: 2026")
@@ -11,10 +11,10 @@ print("Panel: A")
 print("Roll_No: 101")
 
 #2. Multi-line Comments for Specific Fields
-print("Student Name: John Doe")
+print("Student Name: Ojas")
 """
 Address: 123 Main Street
-Contact_No: 9876543210
+Contact_No: 1234567890
 Mother Tongue: English
 """
 
