@@ -45,7 +45,7 @@ print(f"Percentage: {percentage:.2f}%")
 print(f"Highest Marks: {highest_sub} ({marks_dict[highest_sub]} marks)")
 print(f"Lowest Marks: {lowest_sub} ({marks_dict[lowest_sub]} marks)")
 
-# 4. Check if a Number is Positive, Negative, or Zero
+#4. Check if a Number is Positive, Negative, or Zero
 num = float(input("Enter a number: "))
 if num > 0:
   print("The number is Positive.")
@@ -173,7 +173,7 @@ for i in range(1, rows + 1):
     print("*", end=" ")
   print()
 
-#Mini Project 1
+# Mini Project 1
 distance = float(input("How far do you want to travel (in miles)? "))
 if distance < 3:
   print("Recommendation: Ride a bicycle.")
@@ -182,7 +182,7 @@ elif distance < 300:
 else:
   print("Recommendation: Drive a supercar.")
 
-#Mini Project 2
+# Mini Project 2
 # Given data
 cost_per_hour = 0.51
 cost_per_day = cost_per_hour * 24
@@ -407,3 +407,24 @@ print("Index:", t.index(30))
 sample_list = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
 new_list = [tuple(list(item[:-1]) + [100]) for item in sample_list]
 print(new_list)
+
+#(5) Set Practice
+#1. Remove given item from set
+s = {10, 20, 30, 40}
+s.discard(20)
+print(s)
+
+#2. Intersection of sets
+s1 = {1, 2, 3, 4}
+s2 = {3, 4, 5, 6}
+print(s1.intersection(s2))
+
+#3. Union of sets
+s1 = {1, 2, 3}
+s2 = {3, 4, 5}
+print(s1.union(s2))
+
+#4. Maximum and minimum value in a set
+s = {15, 3, 89, 22, 7}
+print("Max:", max(s))
+print("Min:", min(s))
