@@ -382,3 +382,28 @@ my_dict = {
     'marks': [65, 87, 67, 94],
 }
 print("Sorted keys:", sorted(my_dict))
+
+#(4) Tuple Problems
+
+#1. Print 4th element from first and 4th from last
+t = (10, 20, 30, 40, 50, 60, 70)
+print("4th from start:", t[3])
+print("4th from last:", t[-4])
+
+#2. Check whether element exists in a tuple
+t = (10, 20, 30, 40)
+val = int(input("Enter value to check: "))
+print("Exists:", val in t)
+
+#3. Convert a list into a tuple
+my_list = [1, 2, 3, 4]
+print(tuple(my_list))
+
+#4. Find index of an item in a tuple
+t = (10, 20, 30, 20, 40)
+print("Index:", t.index(30))
+
+#5. Replace last value of tuples in a list to 100
+sample_list = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+new_list = [tuple(list(item[:-1]) + [100]) for item in sample_list]
+print(new_list)
