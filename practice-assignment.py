@@ -1,3 +1,4 @@
+# (1) Python Basics - Practice assignment
 #1. Print Student Details
 
 print("Student Name: John Doe")
@@ -10,7 +11,6 @@ print("Panel: A")
 print("Roll_No: 101")
 
 #2. Multi-line Comments for Specific Fields
-
 print("Student Name: John Doe")
 """
 Address: 123 Main Street
@@ -136,13 +136,13 @@ else:
   print(f"{num_str} is not a palindrome.")
 
 #14. Accept 5 Numbers and Display Their Cube Values
-
 cubes = []
 for i in range(5):
   n = float(input(f"Enter number {i+1}: "))
   cubes.append(n**3)
 
 print("Cube values:", cubes)
+
 #15. Display Prime Factors of a Number
 n = int(input("Enter a number: "))
 print(f"Prime factors of {n}:", end=" ")
@@ -203,7 +203,7 @@ print(f"-> ${cost_per_month:.2f}\n")
 print(f"How many days can I operate one server with $918?")
 print(f"-> {days_with_budget:.1f} days")
 
-#List Practice
+# (2) List Practice
 
 #1. Create a list of 5 integers and display/access elements
 my_list = [10, 20, 30, 40, 50]
@@ -310,3 +310,75 @@ months = [
 ]
 num = int(input("Enter month number (1-12): "))
 print("Month abbreviation:", months[num] if 1 <= num <= 12 else "Invalid")
+
+#(3) Dictionary Practice
+
+#1. Add key and value to a dictionary
+d = {0: 10, 1: 20}
+d[2] = 30
+print("Updated dictionary:", d)
+
+#2. Concatenate dictionaries
+dic1 = {1: 10, 2: 20}
+dic2 = {3: 30, 4: 40}
+dic3 = {5: 50, 6: 60}
+dic1.update(dic2)
+dic1.update(dic3)
+print("Concatenated dictionary:", dic1)
+
+#3. Check if key exists
+d = {1: 10, 2: 20}
+key = int(input("Enter key to check: "))
+print("Key exists:", key in d)
+
+#4. Iterate over keys, values, and both
+d = {1: 10, 2: 20, 3: 30}
+print("Keys:", list(d.keys()))
+print("Values:", list(d.values()))
+for k, v in d.items():
+  print("Key:", k, "Value:", v)
+  
+#5. Dictionary with numbers 1-15 as keys and squares as values
+d = {i: i**2 for i in range(1, 16)}
+print(d)
+
+#6. Sum all values in a dictionary
+d = {'a': 10, 'b': 20, 'c': 30}
+print("Sum:", sum(d.values()))
+
+#7. Student information dictionary operations
+my_dict = {
+    'name': 'John',
+    'panel': 'A',
+    'rollno': 101,
+    'marks': 85,
+    'grade': 'A',
+}
+my_dict['age'] = 20  # Add
+del my_dict['grade']  # Delete
+print("Student Info:", my_dict)
+
+#8. Convert list to dictionary
+list1 = ['name', 'panel', 'rollno']
+list2 = ['ABC', 'B', 34]
+my_dict = dict(zip(list1, list2))
+print(my_dict)
+
+#9. Convert dictionary to lists of keys and values
+my_dict = {'name': 'ABC', 'panel': 'B', 'rollno': 34}
+print("Keys:", list(my_dict.keys()))
+print("Values:", list(my_dict.values()))
+
+#10. Find mean of values of dictionary
+mydict = {'marks1': 23, 'marks2': 123, 'marks3': 43, 'marks4': 13, 'marks5': 39}
+vals = list(mydict.values())
+print("Mean:", sum(vals) / len(vals))
+
+#11. Sort elements of dictionary using sorted()
+my_dict = {
+    'name': 'ABC',
+    'panel': 'B',
+    'rollno': 34,
+    'marks': [65, 87, 67, 94],
+}
+print("Sorted keys:", sorted(my_dict))
