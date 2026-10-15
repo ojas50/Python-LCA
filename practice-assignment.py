@@ -428,3 +428,45 @@ print(s1.union(s2))
 s = {15, 3, 89, 22, 7}
 print("Max:", max(s))
 print("Min:", min(s))
+
+#(6) NumPy Practice
+import numpy as np
+
+# 1. 3x3 array of all True
+print(np.ones((3, 3), dtype=bool))
+
+# 2. 1D array of 10 evenly spaced values between 5 and 50
+print(np.linspace(5, 50, 10))
+
+# 3. Convert Python list to NumPy array
+print(np.array([1, 2, 3, 4]))
+
+# 4. Reverse a 1D NumPy array
+arr = np.array([1, 2, 3, 4])
+print(arr[::-1])
+
+# 5. 3x3 identity matrix
+print(np.eye(3))
+
+# 6. 4x4 array, extract first row and last column
+matrix = np.arange(16).reshape(4, 4)
+print("First row:", matrix[0])
+print("Last column:", matrix[:, -1])
+
+# 7. 4x4 array, extract first two rows and columns
+print(matrix[:2, :2])
+
+# 8. Element-wise arithmetic operations
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+print("Add:", a + b)
+print("Multiply:", a * b)
+
+# 9. Dot product of two arrays
+print("Dot Product:", np.dot(a, b))
+
+# 10. Mean, median, standard deviation
+data = np.array([10, 20, 30, 40, 50])
+print("Mean:", np.mean(data))
+print("Median:", np.median(data))
+print("Std Dev:", np.std(data))
